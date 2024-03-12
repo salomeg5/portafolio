@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
@@ -10,9 +8,10 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-export default function intro() {
+export default function Intro() {
     const { ref } = useSectionInView("Home", 0.5);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
     return (
         <section id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] ">
             <div className='flex items-center justify-center'>
