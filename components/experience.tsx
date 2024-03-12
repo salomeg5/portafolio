@@ -4,6 +4,13 @@ import SectionHeading from './section-heading';
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 
+interface Experience {
+  id: number;
+  title: string;
+  period: string;
+  description: string;
+}
+
 const experiences = [
   {
     id: 1,
@@ -34,7 +41,7 @@ const experiences = [
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
 
-  const renderExperience = (experience, index) => (
+  const renderExperience = (experience: Experience, index: number) => (
     <div className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center mb-8 md:mb-0`}>
       <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-[20]' : 'md:pl-[20]'}`}>
         <div className="bg-white rounded-xl p-4 shadow-lg">

@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import React from 'react'
+"use client";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
