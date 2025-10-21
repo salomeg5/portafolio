@@ -1,6 +1,5 @@
 "use client";
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload, HiOutlineEye } from "react-icons/hi";
@@ -13,7 +12,7 @@ export default function Intro() {
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
     return (
-        <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+        <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28">
             <div className='flex items-center justify-center'>
                 <div className='relative'>
                     <motion.div
@@ -23,12 +22,11 @@ export default function Intro() {
                             type: "tween",
                             duration: 0.5,
                         }}>
-                        <Image
+                        <img
                             src="/Salome.jpg"
                             alt="Salomé Gallego Arbelaez - Ingeniera de Sistemas y Telecomunicaciones"
                             width="256"
                             height="256"
-                            quality="95"
                             className='h-32 w-32 rounded-full object-cover border-[0.35rem] border-white shadow-xl'
                         />
                     </motion.div>
