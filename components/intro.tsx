@@ -1,13 +1,13 @@
 "use client";
 import { motion } from 'framer-motion';
 import { BsLinkedin } from "react-icons/bs";
-import { HiDownload, HiOutlineEye } from "react-icons/hi";
+import { HiOutlineEye } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
-    const { ref } = useSectionInView("Home", 0.5);
+    const { ref } = useSectionInView("Inicio", 0.5);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
     return (
@@ -65,13 +65,6 @@ export default function Intro() {
                     rel="noopener noreferrer">
                     Ver HV {" "}
                     <HiOutlineEye className="opacity-60 group-hover:scale-110 transition cursor-pointer" /></a>
-                <a className="group bg-white text-gray-900 px-7 py-3 flex items-center gap-2
-                rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105
-                transition cursor-pointer borderBlack/10"
-                    href="/portafolio/hv/Salomé Gallego Arbelaez - HV.pdf"
-                    download="Salomé_Gallego_Arbelaez_HV.pdf">
-                    Descargar HV {" "}
-                    <HiDownload className="opacity-60 group-hover:translate-y-1 transition cursor-pointer" /></a>
                 <a className="bg-white text-gray-700 px-7 py-3 hover:text-gray-950 flex items-center gap-2
                 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105
                 transition cursor-pointer border-black/10"

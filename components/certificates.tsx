@@ -25,7 +25,7 @@ const fadeInAnimationVariants = {
 };
 
 export default function Certificates() {
-    const { ref } = useSectionInView("Certificates", 0.5);
+    const { ref } = useSectionInView("Certificados", 0.5);
     const [selectedCertificate, setSelectedCertificate] = useState<{
         name: string;
         institution: string;

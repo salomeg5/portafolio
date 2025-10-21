@@ -45,7 +45,7 @@ const experiences = [
 ];
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experiencia");
 
   const renderExperience = (experience: Experience, index: number) => (
     <div className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center mb-8 md:mb-0`}>
