@@ -22,7 +22,7 @@ export default function Intro() {
                             duration: 0.5,
                         }}>
                         <img
-                            src="./Salome.jpg"
+                            src="/portafolio/Salome.jpg"
                             alt="Salomé Gallego Arbelaez - Ingeniera de Sistemas y Telecomunicaciones"
                             width="256"
                             height="256"
@@ -60,7 +60,7 @@ export default function Intro() {
                 <a className="group bg-white text-gray-900 px-7 py-3 flex items-center gap-2
                 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105
                 transition cursor-pointer borderBlack/10"
-                    href="/hv/Salomé Gallego Arbelaez - HV.pdf"
+                    href="/portafolio/hv/Salomé Gallego Arbelaez - HV.pdf"
                     target="_blank"
                     rel="noopener noreferrer">
                     Ver HV {" "}
@@ -68,7 +68,7 @@ export default function Intro() {
                 <a className="group bg-white text-gray-900 px-7 py-3 flex items-center gap-2
                 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105
                 transition cursor-pointer borderBlack/10"
-                    href="/hv/Salomé Gallego Arbelaez - HV.pdf"
+                    href="/portafolio/hv/Salomé Gallego Arbelaez - HV.pdf"
                     download="Salomé_Gallego_Arbelaez_HV.pdf">
                     Descargar HV {" "}
                     <HiDownload className="opacity-60 group-hover:translate-y-1 transition cursor-pointer" /></a>
