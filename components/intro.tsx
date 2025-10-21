@@ -1,7 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 import { HiDownload, HiOutlineEye } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
@@ -23,7 +22,7 @@ export default function Intro() {
                             duration: 0.5,
                         }}>
                         <img
-                            src="/Salome.jpg"
+                            src="./Salome.jpg"
                             alt="Salomé Gallego Arbelaez - Ingeniera de Sistemas y Telecomunicaciones"
                             width="256"
                             height="256"
@@ -58,14 +57,6 @@ export default function Intro() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, }}
             >
-                <Link
-                    href="#contact"
-                    onClick={() => {
-                        setActiveSection("Contact");
-                        setTimeOfLastClick(Date.now());
-                    }} className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2
-                rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105
-                transition">Contáctame < BsArrowRight className="opacity-70 group-hover:translate-x-1 transition " /></Link>
                 <a className="group bg-white text-gray-900 px-7 py-3 flex items-center gap-2
                 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105
                 transition cursor-pointer borderBlack/10"
