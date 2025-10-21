@@ -4,9 +4,7 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
-import toast from "react-hot-toast";
 
 export default function Contact() {
     const { ref } = useSectionInView("Contact");
@@ -41,16 +39,8 @@ export default function Contact() {
 
             <form
                 className="mt-10 flex flex-col dark:text-black"
-                action={async (formData) => {
-                    const { data, error } = await sendEmail(formData);
-
-                    if (error) {
-                        toast.error(error);
-                        return;
-                    }
-
-                    toast.success("¡Pronto te estaré contactando!");
-                }}
+                action="https://formspree.io/f/xpwgkqzv"
+                method="POST"
             >
                 <input
                     className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
