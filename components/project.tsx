@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = typeof projectsData[number];
 
-export default function Project({ title, description, tags, imageUrl }: ProjectProps) {
+export default function Project({ title, description, tags, imageUrl, projectUrl }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,10 +23,19 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
       className="group mb-3 sm:mb-8 last:mb-0 "
     >
       <section
-        className="group bg-gray-100 rounded -lg max-w-[42rem] borderBlack/5 overflow-hidden sm:pr-8 relative
-        sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 mb-3 sm:mb-8 last:mb-0 ">
+        className={`group bg-gray-100 rounded -lg max-w-[42rem] borderBlack/5 overflow-hidden sm:pr-8 relative
+        sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 mb-3 sm:mb-8 last:mb-0 ${projectUrl ? 'cursor-pointer' : ''}`}
+        onClick={() => projectUrl && window.open(projectUrl, '_blank')}
+      >
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
+          <div className="flex items-center gap-2">
+            <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
+            {projectUrl && (
+              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
+                Live Demo
+              </span>
+            )}
+          </div>
           <p className="mt-2 leading-relaxed text-gray-700">
             {description}
           </p>

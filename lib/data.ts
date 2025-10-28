@@ -14,6 +14,7 @@ import {
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import clinicMockupImg from "@/public/Mockup.png";
 
 export const links = [
   {
@@ -44,11 +45,20 @@ export const links = [
 
 export const projectsData = [
   {
+    title: "Sistema de Gestión Clínica",
+    description:
+      "Sistema completo de administración de citas médicas con dashboard interactivo. Permite gestionar doctores, pacientes, citas y generar reportes. Desarrollado con Laravel, Angular, PHP y TypeScript.",
+    tags: ["Laravel", "Angular", "PHP", "TypeScript", "MySQL"],
+    imageUrl: clinicMockupImg,
+    projectUrl: "https://salomeg5.github.io/clinica/",
+  },
+  {
     title: "Innovating the Future",
     description:
       "We are thrilled to announce that we are in the early stages of several innovative projects poised to transform our industry.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
     imageUrl: corpcommentImg,
+    projectUrl: undefined,
   },
   {
     title: "Innovating the Future",
@@ -56,6 +66,7 @@ export const projectsData = [
       "We are thrilled to announce that we are in the early stages of several innovative projects poised to transform our industry.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
     imageUrl: rmtdevImg,
+    projectUrl: undefined,
   },
   {
     title: "Innovating the Future",
@@ -63,6 +74,7 @@ export const projectsData = [
       "We are thrilled to announce that we are in the early stages of several innovative projects poised to transform our industry.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
     imageUrl: wordanalyticsImg,
+    projectUrl: undefined,
   },
 ] as const;
 
