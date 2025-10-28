@@ -14,7 +14,7 @@ import {
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
-import clinicMockupImg from "@/public/Mockup.png";
+import mockupImg from "@/public/Mockup.png";
 
 export const links = [
   {
@@ -47,9 +47,9 @@ export const projectsData = [
   {
     title: "Sistema de Gestión Clínica",
     description:
-      "Sistema completo de administración de citas médicas con dashboard interactivo. Permite gestionar doctores, pacientes, citas y generar reportes. Desarrollado con Laravel, Angular, PHP y TypeScript.",
+      "Sistema completo de administración de citas médicas con dashboard interactivo. Permite gestionar doctores, pacientes, citas y generar reportes.",
     tags: ["Laravel", "Angular", "PHP", "TypeScript", "MySQL"],
-    imageUrl: clinicMockupImg,
+    imageUrl: mockupImg,
     projectUrl: "https://salomeg5.github.io/clinica/",
   },
   {

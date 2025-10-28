@@ -28,14 +28,7 @@ export default function Project({ title, description, tags, imageUrl, projectUrl
         onClick={() => projectUrl && window.open(projectUrl, '_blank')}
       >
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <div className="flex items-center gap-2">
-            <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
-            {projectUrl && (
-              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                Live Demo
-              </span>
-            )}
-          </div>
+          <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-700">
             {description}
           </p>
