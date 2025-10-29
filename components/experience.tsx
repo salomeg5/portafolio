@@ -3,6 +3,8 @@ import React from 'react';
 import SectionHeading from './section-heading';
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/lib/translations";
 
 interface Experience {
   id: number;
@@ -46,6 +48,8 @@ const experiences = [
 
 export default function Experience() {
   const { ref } = useSectionInView("Experiencia");
+  const { language } = useLanguage();
+  const t = translations[language];
 
   const renderExperience = (experience: Experience, index: number) => (
     <div className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center mb-8 md:mb-0`}>
@@ -80,7 +84,7 @@ export default function Experience() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className='scroll-mt-28 mb-28 sm:mb-40 relative'>
-      <SectionHeading>Experiencia</SectionHeading>
+      <SectionHeading>{t.experience.title}</SectionHeading>
       <div className="mt-8 max-w-7xl mx-auto px-4">
         {experiences.map((exp, index) => (
           <React.Fragment key={exp.id}>

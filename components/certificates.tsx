@@ -9,6 +9,8 @@ import { IoClose } from "react-icons/io5";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { HiOutlineDocumentText } from "react-icons/hi";
 import Image from "next/image";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/lib/translations";
 
 const fadeInAnimationVariants = {
     initial: {
@@ -26,6 +28,8 @@ const fadeInAnimationVariants = {
 
 export default function Certificates() {
     const { ref } = useSectionInView("Certificados", 0.5);
+    const { language } = useLanguage();
+    const t = translations[language];
     const [selectedCertificate, setSelectedCertificate] = useState<{
         name: string;
         institution: string;
@@ -41,7 +45,7 @@ export default function Certificates() {
                 ref={ref}
                 className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
             >
-                <SectionHeading>Certificados</SectionHeading>
+                <SectionHeading>{t.certificates.title}</SectionHeading>
                 <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
                     {certificatesData.map((certificate, index) => (
                         <motion.li

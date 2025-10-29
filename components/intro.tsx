@@ -5,10 +5,14 @@ import { HiOutlineEye } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/lib/translations";
 
 export default function Intro() {
     const { ref } = useSectionInView("Inicio", 0.5);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+    const { language } = useLanguage();
+    const t = translations[language];
 
     return (
         <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28">
@@ -47,10 +51,10 @@ export default function Intro() {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <span className='font-bold'>Hola, soy Salomé Gallego</span> y soy {" "}
-                <span className='font-bold'>Frontend Developer</span> con {" "}
-                <span className='font-bold'>+ 2 años</span> de experiencia y disfruto crear <span className='italic'>sitios y apps </span>  {" "}
-                <span className='underline'>con ReactJS y HTML, CSS y JavaScript </span>  {" "}
+                <span className='font-bold'>{t.intro.greeting}</span> y soy {" "}
+                <span className='font-bold'>{t.intro.role}</span> con {" "}
+                <span className='font-bold'>{t.intro.experience}</span> {t.intro.description} <span className='italic'>{t.intro.projects} </span>  {" "}
+                <span className='underline'>{t.intro.tech} </span>  {" "}
             </motion.h1>
             <motion.div className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 tex-lg font-medium"
                 initial={{ opacity: 0, y: 100 }}
@@ -63,7 +67,7 @@ export default function Intro() {
                     href="/portafolio/hv/Salomé Gallego Arbelaez - HV.pdf"
                     target="_blank"
                     rel="noopener noreferrer">
-                    Ver HV {" "}
+                    {t.intro.viewCV} {" "}
                     <HiOutlineEye className="opacity-60 group-hover:scale-110 transition cursor-pointer" /></a>
                 <a className="bg-white text-gray-700 px-7 py-3 hover:text-gray-950 flex items-center gap-2
                 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105
