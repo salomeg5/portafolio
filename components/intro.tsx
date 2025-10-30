@@ -1,7 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
 import { BsLinkedin } from "react-icons/bs";
-import { HiOutlineEye } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -61,14 +60,6 @@ export default function Intro() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, }}
             >
-                <a className="group bg-white text-gray-900 px-7 py-3 flex items-center gap-2
-                rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105
-                transition cursor-pointer borderBlack/10"
-                    href="/portafolio/hv/Salomé Gallego Arbelaez - HV.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    {t.intro.viewCV} {" "}
-                    <HiOutlineEye className="opacity-60 group-hover:scale-110 transition cursor-pointer" /></a>
                 <a className="bg-white text-gray-700 px-7 py-3 hover:text-gray-950 flex items-center gap-2
                 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105
                 transition cursor-pointer border-black/10"

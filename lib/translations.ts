@@ -15,7 +15,6 @@ export const translations = {
       description: "de experiencia y disfruto crear",
       projects: "sitios y apps",
       tech: "con ReactJS y HTML, CSS y JavaScript",
-      viewCV: "Ver HV",
     },
     about: {
       title: "Sobre mí",
@@ -105,7 +104,6 @@ export const translations = {
       description: "of experience and I enjoy creating",
       projects: "websites and apps",
       tech: "with ReactJS and HTML, CSS and JavaScript",
-      viewCV: "View CV",
     },
     about: {
       title: "About me",
