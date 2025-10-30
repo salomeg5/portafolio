@@ -17,8 +17,16 @@ export default function Header() {
     const t = translations[language];
 
     // Create translated links mapping
-    const translatedLinks = links.map((link, index) => {
-        const key = link.name.toLowerCase().replace(" ", "").replace("ó", "o") as keyof typeof t.nav;
+    const translatedLinks = links.map((link) => {
+        const keyMap: { [key: string]: keyof typeof t.nav } = {
+            "Inicio": "home",
+            "Sobre mí": "about", 
+            "Certificados": "certificates",
+            "Habilidades": "skills",
+            "Proyectos": "projects",
+            "Experiencia": "experience"
+        };
+        const key = keyMap[link.name] || "home";
         return {
             ...link,
             name: t.nav[key] || link.name
