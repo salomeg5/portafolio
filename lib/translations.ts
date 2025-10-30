@@ -51,6 +51,32 @@ export const translations = {
     projects: {
       title: "Mis proyectos",
       viewProject: "Ver Proyecto",
+      projects: [
+        {
+          title: "Sistema de Gestión Clínica",
+          description: "Sistema completo de administración de citas médicas con dashboard interactivo. Permite gestionar doctores, pacientes, citas y generar reportes.",
+          tags: ["Laravel", "Angular", "PHP", "TypeScript", "MySQL"],
+          projectUrl: "https://salomeg5.github.io/clinica/",
+        },
+        {
+          title: "Innovando el Futuro",
+          description: "Estamos emocionados de anunciar que estamos en las primeras etapas de varios proyectos innovadores preparados para transformar nuestra industria.",
+          tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+          projectUrl: undefined,
+        },
+        {
+          title: "Innovando el Futuro",
+          description: "Estamos emocionados de anunciar que estamos en las primeras etapas de varios proyectos innovadores preparados para transformar nuestra industria.",
+          tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+          projectUrl: undefined,
+        },
+        {
+          title: "Innovando el Futuro",
+          description: "Estamos emocionados de anunciar que estamos en las primeras etapas de varios proyectos innovadores preparados para transformar nuestra industria.",
+          tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+          projectUrl: undefined,
+        }
+      ]
     },
     experience: {
       title: "Experiencia",
@@ -140,6 +166,32 @@ export const translations = {
     projects: {
       title: "My Projects",
       viewProject: "View Project",
+      projects: [
+        {
+          title: "Clinical Management System",
+          description: "Complete medical appointment management system with interactive dashboard. Allows managing doctors, patients, appointments and generating reports.",
+          tags: ["Laravel", "Angular", "PHP", "TypeScript", "MySQL"],
+          projectUrl: "https://salomeg5.github.io/clinica/",
+        },
+        {
+          title: "Innovating the Future",
+          description: "We are thrilled to announce that we are in the early stages of several innovative projects poised to transform our industry.",
+          tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+          projectUrl: undefined,
+        },
+        {
+          title: "Innovating the Future",
+          description: "We are thrilled to announce that we are in the early stages of several innovative projects poised to transform our industry.",
+          tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+          projectUrl: undefined,
+        },
+        {
+          title: "Innovating the Future",
+          description: "We are thrilled to announce that we are in the early stages of several innovative projects poised to transform our industry.",
+          tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+          projectUrl: undefined,
+        }
+      ]
     },
     experience: {
       title: "Experience",
